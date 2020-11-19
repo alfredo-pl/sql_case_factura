@@ -51,3 +51,17 @@ CREATE TABLE producto_categoria(
     FOREIGN KEY (id_producto) REFERENCES producto(id), 
     FOREIGN KEY (id_categoria) REFERENCES categoria(id)
 );
+
+
+--insertamos 5 clientes en la tabla cliente
+INSERT INTO cliente (nombre, rut, direccion)
+VALUES ('Alejandro Lopez', '25465654-2', 'Independecia calle montau');
+INSERT INTO cliente (nombre, rut, direccion)
+VALUES ('Marla Oropeza', '20554433-6', 'Santiago Centro calle portugal');
+INSERT INTO cliente (nombre, rut, direccion)
+VALUES ('Leonel Andrade', '22445354-3', 'Providencia');
+INSERT INTO cliente (nombre, rut, direccion)
+VALUES ('Maria Perez', '26442334-5', 'San Miguel');
+INSERT INTO cliente (nombre, rut, direccion)
+VALUES ('Lucia Rojas', '21341334-1', 'Estacion Central');
+
