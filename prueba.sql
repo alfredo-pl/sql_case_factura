@@ -119,4 +119,52 @@ VALUES (1009 ,4, 8810,'2020-10-09');
 INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
 VALUES (1010 ,4, 3000,'2020-10-10');
 
-
+--insertamos valores en la tabla relacion  factura_producto
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1001,200,2);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1001,700,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1002,300,3);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1002,500,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1002,700,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1003,100,2);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1003,600,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1004,800,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1004,700,2);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1004,400,3);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1005,200,2);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1005,500,2);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1005,600,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1006,500,5);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1007,700,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1007,600,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1008,500,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1008,100,3);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1008,200,2);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1009,800,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1009,400,1);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1009,100,2);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1009,700,2);
+INSERT INTO factura_producto(id_factura, id_producto, cantidad)
+VALUES (1010,300,3);
