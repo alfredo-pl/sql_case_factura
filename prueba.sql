@@ -22,6 +22,7 @@ CREATE TABLE producto(
 CREATE TABLE factura(
     numero_factura INT PRIMARY KEY,
     cliente INT,
+    subtotal INT,
     fecha DATE,
     FOREIGN KEY (cliente) REFERENCES cliente(id)
 );
@@ -39,6 +40,7 @@ CREATE TABLE factura_producto (
     id SERIAL PRIMARY KEY,
     id_factura INT,
     id_producto INT,
+    cantidad INT,
     FOREIGN KEY (id_factura) REFERENCES factura(numero_factura), 
     FOREIGN KEY (id_producto) REFERENCES producto(id)
 );
@@ -67,18 +69,54 @@ VALUES ('Lucia Rojas', '21341334-1', 'Estacion Central');
 
 --insertamos 8 productos en la tabla producto
 INSERT INTO producto (id ,nombre , descripcion, valor)
-VALUES (200 , 'Doritos', 'tradicional queso 320gr', 1180);
+VALUES (100 , 'Doritos', 'tradicional queso 320gr', 1180);
 INSERT INTO producto (id ,nombre , descripcion, valor)
-VALUES (300 , 'Ruffles', 'Mega crunch 120gr', 800);
+VALUES (200 , 'Ruffles', 'Mega crunch 120gr', 800);
 INSERT INTO producto (id ,nombre , descripcion, valor)
-VALUES (400 , 'Cheetos', 'Palitos sabor queso', 1000);
+VALUES (300 , 'Cheetos', 'Palitos sabor queso', 1000);
 INSERT INTO producto (id ,nombre , descripcion, valor)
-VALUES (500 , "Lay's", 'Original 120gr', 750);
+VALUES (400 , "Lay's", 'Original 120gr', 750);
 INSERT INTO producto (id ,nombre , descripcion, valor)
-VALUES (600 , 'Oreo', 'Galleta vainilla con relleno vanilla 126gr', 600);
+VALUES (500 , 'Oreo', 'Galleta vainilla con relleno vanilla 126gr', 600);
 INSERT INTO producto (id ,nombre , descripcion, valor)
-VALUES (700 , 'Pepsi 3l', 'Bebida light 3lts', 2050);
+VALUES (600 , 'Pepsi 3l', 'Bebida light 3lts', 2050);
 INSERT INTO producto (id ,nombre , descripcion, valor)
-VALUES (800 , 'Coca-cola 3l', 'Bebida original 3lts', 1950);
+VALUES (700 , 'Coca-cola 3l', 'Bebida original 3lts', 1950);
 INSERT INTO producto (id ,nombre , descripcion, valor)
-VALUES (900 , 'Mani 430g', 'Mani sin sal 430g', 1800);
+VALUES (800 , 'Mani 430g', 'Mani sin sal 430g', 1800);
+
+
+--insertamos 4 categorias en la tabla categoria
+INSERT INTO categoria (nombre, descripcion)
+VALUES ('snak' , 'papas, galletas ');
+INSERT INTO categoria (nombre, descripcion)
+VALUES ('galleta' , 'dulces, saladas');
+INSERT INTO categoria (nombre, descripcion)
+VALUES ('bebida' , 'liquidos');
+INSERT INTO categoria (nombre, descripcion)
+VALUES ('gaseosa' , 'Que contine gas ');
+
+
+--insertamos 10 facturas en la tabla factura
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1001 ,1, 2550,'2020-10-01');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1002 ,1, 5550,'2020-10-02');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1003 ,2, 7950,'2020-10-03');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1004 ,2, 4410,'2020-10-04');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1005 ,2, 4850,'2020-10-05');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1006 ,3, 3000,'2020-10-06');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1007 ,4, 4000,'2020-10-07');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1008 ,4, 5740,'2020-10-08');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1009 ,4, 8810,'2020-10-09');
+INSERT INTO factura (numero_factura , cliente, subtotal, fecha)
+VALUES (1010 ,4, 3000,'2020-10-10');
+
+
