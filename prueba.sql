@@ -168,3 +168,15 @@ INSERT INTO factura_producto(id_factura, id_producto, cantidad)
 VALUES (1009,700,2);
 INSERT INTO factura_producto(id_factura, id_producto, cantidad)
 VALUES (1010,300,3);
+
+--Consultas
+--¿Que cliente realizó la compra mas cara?
+SELECT nombre FROM factura INNER JOIN cliente ON factura.cliente = cliente.id ORDER BY subtotal DESC LIMIT 1;
+
+--¿Que cliente pagó sobre 100 de monto?
+SELECT DISTINCT nombre FROM factura INNER JOIN cliente ON factura.cliente = cliente.id WHERE subtotal > 100;
+
+--¿Cuantos clientes han comprado el producto 6?
+SELECT nombre FROM(SELECT DISTINCT cliente FROM (SELECT id_factura FROM factura_producto WHERE id_producto = 600)
+    AS x INNER JOIN factura ON factura.numero_factura = x.id_factura)
+    AS cli INNER JOIN cliente ON cliente.id = cli.cliente;
